@@ -19,13 +19,12 @@ import com.peoplemanagement.model.Person;
 import com.peoplemanagement.service.PersonService;
 
 @Path("/persons")
-public class PersonWBService {
+public class PersonResource {
 
 	@Autowired
 	private PersonService personService;
 
 	@GET
-	@Path("/allperson")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Person> getAllPersons() throws SQLException {
 		return personService.getAllPersons();

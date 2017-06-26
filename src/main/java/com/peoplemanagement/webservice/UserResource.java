@@ -11,7 +11,7 @@ import com.peoplemanagement.model.Users;
 import com.peoplemanagement.service.UserServiceImpl;
 
 @Path("/login")
-public class UserWBService {
+public class UserResource {
 
 	@Autowired
 	private UserServiceImpl userServiceImpl;

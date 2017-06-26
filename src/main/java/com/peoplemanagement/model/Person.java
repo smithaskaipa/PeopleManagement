@@ -17,10 +17,10 @@ public class Person implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="personid")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "personid")
 	long personID;
-	
+
 	@Column(name = "lastname")
 	String lastName;
 
@@ -42,13 +42,13 @@ public class Person implements Serializable {
 	@Column(name = "caste")
 	String caste;
 
-	@Column(name="dateofbirth")
+	@Column(name = "dateofbirth")
 	Date dateOfBirth;
-	
-	@Column(name="recordstatus")
+
+	@Column(name = "recordstatus")
 	RecordStatus recordStatus;
-	
-	@Column(name="createddate")
+
+	@Column(name = "createddate")
 	Date createdDate = new Date();
 
 	public RecordStatus getRecordStatus() {
@@ -67,7 +67,6 @@ public class Person implements Serializable {
 		this.createdDate = createdDate;
 	}
 
-	
 	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
@@ -76,9 +75,10 @@ public class Person implements Serializable {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public Person(){
-		
+	public Person() {
+
 	}
+
 	public long getPersonID() {
 		return personID;
 	}
