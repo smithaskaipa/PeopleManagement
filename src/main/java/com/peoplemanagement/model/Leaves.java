@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.peoplemanagement.codetype.LeaveType;
+import com.peoplemanagement.codetype.RecordStatus;
+
 @Entity
 public class Leaves implements Serializable {
 
@@ -20,7 +23,7 @@ public class Leaves implements Serializable {
 	long leavesID;
 
 	@Column(name = "leavetype")
-	String leaveType;
+	LeaveType leaveType;
 
 	@Column(name = "startdate")
 	Date startDate;
@@ -31,6 +34,28 @@ public class Leaves implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "personID")
 	Person person;
+	
+	@Column(name="recordstatus")
+	RecordStatus recordStatus;
+	
+	@Column(name="createddate")
+	Date createdDate = new Date();
+
+	public RecordStatus getRecordStatus() {
+		return recordStatus;
+	}
+
+	public void setRecordStatus(RecordStatus recordStatus) {
+		this.recordStatus = recordStatus;
+	}
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
 
 	public long getLeavesID() {
 		return leavesID;
@@ -40,11 +65,11 @@ public class Leaves implements Serializable {
 		this.leavesID = leavesID;
 	}
 
-	public String getLeaveType() {
+	public LeaveType getLeaveType() {
 		return leaveType;
 	}
 
-	public void setLeaveType(String leaveType) {
+	public void setLeaveType(LeaveType leaveType) {
 		this.leaveType = leaveType;
 	}
 

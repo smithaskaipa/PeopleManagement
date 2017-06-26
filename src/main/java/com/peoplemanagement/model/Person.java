@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.peoplemanagement.codetype.RecordStatus;
+
 @Entity
 public class Person implements Serializable {
 
@@ -42,6 +44,30 @@ public class Person implements Serializable {
 
 	@Column(name="dateofbirth")
 	Date dateOfBirth;
+	
+	@Column(name="recordstatus")
+	RecordStatus recordStatus;
+	
+	@Column(name="createddate")
+	Date createdDate = new Date();
+
+	public RecordStatus getRecordStatus() {
+		return recordStatus;
+	}
+
+	public void setRecordStatus(RecordStatus recordStatus) {
+		this.recordStatus = recordStatus;
+	}
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	
 	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}

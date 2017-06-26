@@ -1,6 +1,7 @@
 package com.peoplemanagement.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.peoplemanagement.codetype.RecordStatus;
 
 @Entity
 public class Users implements Serializable {
@@ -27,6 +30,29 @@ public class Users implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "personID")
 	Person person;
+	
+	@Column(name="recordstatus")
+	RecordStatus recordStatus;
+	
+	@Column(name="createddate")
+	Date createdDate = new Date();
+
+	public RecordStatus getRecordStatus() {
+		return recordStatus;
+	}
+
+	public void setRecordStatus(RecordStatus recordStatus) {
+		this.recordStatus = recordStatus;
+	}
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
 
 	public long getUserID() {
 		return userID;
