@@ -12,8 +12,10 @@ import javax.ws.rs.core.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
 
 import com.peoplemanagement.PMSpringController;
+import com.peoplemanagement.codetype.RecordStatus;
 import com.peoplemanagement.model.Address;
 import com.peoplemanagement.model.ContactDetails;
 import com.peoplemanagement.model.Person;
@@ -24,6 +26,7 @@ import com.peoplemanagement.service.PersonService;
 import com.peoplemanagement.service.UserService;
 
 @Path("/DemoData")
+@Component
 public class DummyDataUtility {
 
 	AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(PMSpringController.class);
@@ -91,6 +94,7 @@ public class DummyDataUtility {
 			person.setGender("Male");
 			person.setNationality("Indian");
 			person.setMaritalStatus("Married");
+			person.setRecordStatus(RecordStatus.Active);
 			this.personService.save(person);
 			personIDs.add(person);
 		}

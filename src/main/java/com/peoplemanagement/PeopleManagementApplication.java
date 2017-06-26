@@ -8,13 +8,15 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+import com.peoplemanagement.webservice.DummyDataUtility;
+
 @SpringBootApplication
 public class PeopleManagementApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(PeopleManagementApplication.class, args);
-		//ctx.getBean(DummyDataUtility.class).insertDummyData();
-		//System.out.println("Done with demo data");
+		ctx.getBean(DummyDataUtility.class).insertDummyData();
+		System.out.println("Done with demo data");
 	}
 
 	@Bean

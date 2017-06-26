@@ -1,0 +1,22 @@
+<!--The whole content below can be removed with the new code.-->
+<div>
+
+	<table class="table table-striped">
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Gender</th>
+			<th>Nationality</th>
+			<th>Date of Birth</th>
+		</tr>
+		<tr *ngFor="let person of persons">
+			<th>{{person.firstName}}</th>
+			<th> {{person.lastName}}</th>
+			<th> {{person.gender}}</th>
+			<th> {{person.nationality}}</th>
+			<th> {{person.dateOfBirth | date:'d MMM,y'}}</th>
+		</tr>
+	</table>
+
+</div>
+
