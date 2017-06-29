@@ -1,7 +1,7 @@
-<!--The whole content below can be removed with the new code.-->
-<div>
-	<table class="table table-striped">
-		<tr>
+<div class="jumbotron">
+  <div class="container">
+   <table class="table table-striped">
+   	<tr>
 			<th>First Name</th>
 			<th>Last Name</th>
 			<th>Gender</th>
@@ -9,7 +9,7 @@
 			<th>Date of Birth</th>
 			<th>Status</th>
 		</tr>
-		<tr *ngFor="let person of persons">
+		<tr>
 			<th>{{person.firstName}}</th>
 			<th> {{person.lastName}}</th>
 			<th> {{person.gender}}</th>
@@ -17,6 +17,6 @@
 			<th> {{person.dateOfBirth | date:'d MMM,y'}}</th>
 			<th>{{ person.recordStatus}}</th>
 		</tr>
-	</table>
+   </table>
+  </div>
 </div>
-

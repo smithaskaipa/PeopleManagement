@@ -39,7 +39,7 @@ export class HTTPAPIService{
 
 
 		}else if (methodType==="POST"){
-            console.log(url);
+         
 			if(isJsonNotRequred){
 				return this.http.post(url , methodData , {
 					headers : headers}).catch(err => this.handleError(err));

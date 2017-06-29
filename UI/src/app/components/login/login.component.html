@@ -1,0 +1,21 @@
+<div>
+	<div style="width: 15%; height: 60%; position: absolute;top:0;bottom: 0;left: 0;right: 0;margin: auto;">
+       <h4>Welcome to HRMS</h4>
+      <br>
+	<form name="form" (ngSubmit)="login()" #f="ngForm" novalidate >
+		<div class="form-group">
+			<input type="text" class="form-control" name="user.userName" [(ngModel)]="user.userName" #username="ngModel" required placeholder="User Name"/>
+			
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control" name="user.password" [(ngModel)]="user.password" #password="ngModel" required placeholder="Password" />
+		</div>
+		<div class="form-group">
+			<button class="btn btn-lg btn-primary btn-block">Login</button>
+		</div>
+	</form>
+</div>
+</div>
+
+
+
